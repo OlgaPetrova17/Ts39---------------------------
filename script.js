@@ -39,9 +39,10 @@ catalogPhones.forEach(handlePhone);
 catalogPhones.forEach((ph, index) => {
     ph.receiveCall(namesOfCalling[index]);
 });
-let hardPhones = catalogPhones.filter((a) => a.weight > 1500);
-hardPhones.sort((g, b) => b.weight - g.weight);
-hardPhones.forEach((nameAny, index) => {
+catalogPhones
+    .filter((a) => a.weight > 1500)
+    .sort((g, b) => b.weight - g.weight)
+    .forEach((nameAny, index) => {
     nameAny.receiveCall(namesOfCalling[index], nameAny);
 });
 //forEach стрелочная функция 2 параметра элемент массива и 2ой параметр индекс
